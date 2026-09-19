@@ -1,0 +1,13 @@
+backend:
+  replicaCount: 2
+  image:
+    repository: 058264118655.dkr.ecr.us-east-1.amazonaws.com/tech-challenge-1-backend
+    tag: latest
+  port: 8080
+
+frontend:
+  replicaCount: 2
+  image:
+    repository: 058264118655.dkr.ecr.us-east-1.amazonaws.com/tech-challenge-1-frontend
+    tag: latest
+  port: 3000

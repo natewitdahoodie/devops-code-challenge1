@@ -1,1 +1,36 @@
-node_modules/
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+crash.log
+crash.*.log
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+credentials
+kubeconfig
+
+# Node.js
+**/node_modules/
+
+# Logs
+*.log
+
+# Build output
+frontend/build/
+backend/build/
+dist/
+
+# Downloaded archives
+*.tar.gz
+*.zip
+
+# OS / editor files
+.DS_Store
+.vscode/
+.idea/
+alb-controller-trust-policy.json
