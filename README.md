@@ -1,59 +1,58 @@
-# Overview
-This repository contains a React frontend, and an Express backend that the frontend connects to.
+# DevOps Technical Challenge — AWS EKS Deployment
 
-# Objective
-Deploy the frontend and backend to somewhere publicly accessible over the internet. The AWS Free Tier should be more than sufficient to run this project, but you may use any platform and tooling you'd like for your solution.
+## Project Overview
 
-Fork this repo as a base. You may change any code in this repository to suit the infrastructure you build in this code challenge.
+This project is a hands-on DevOps technical challenge focused on deploying a two-tier web application using AWS cloud infrastructure and containerization tools.
 
-# Submission
-1. A github repo that has been forked from this repo with all your code.
-2. Modify this README file with instructions for:
-* Any tools needed to deploy your infrastructure
-* All the steps needed to repeat your deployment process
-* URLs to the your deployed frontend.
+The starter application consists of a React frontend and an Express backend. My work focused on building the infrastructure and deployment configurations needed to run the application in a containerized AWS environment.
 
-# Evaluation
-You will be evaluated on the ease to replicate your infrastructure. This is a combination of quality of the instructions, as well as any scripts to automate the overall setup process.
+## Technologies Used
 
-# Setup your environment
-Install nodejs. Binaries and installers can be found on nodejs.org.
-https://nodejs.org/en/download/
+- **AWS:** Cloud infrastructure and Elastic Kubernetes Service (EKS)
+- **Terraform:** Infrastructure as Code (IaC)
+- **Docker:** Containerizing application components
+- **Kubernetes:** Managing containerized application workloads
+- **Helm:** Organizing Kubernetes deployment configurations
+- **Git/GitHub:** Version control and project documentation
 
-For macOS or Linux, Nodejs can usually be found in your preferred package manager.
-https://nodejs.org/en/download/package-manager/
+## My Contributions
 
-Depending on the Linux distribution, the Node Package Manager `npm` may need to be installed separately.
+For this challenge, I worked on the infrastructure and deployment side of the application rather than developing the original frontend and backend.
 
-# Running the project
-The backend and the frontend will need to run on separate processes. The backend should be started first.
-```
-cd backend
-npm ci
-npm start
-```
-The backend should response to a GET request on `localhost:8080`.
+My work included:
 
-With the backend started, the frontend can be started.
-```
-cd frontend
-npm ci
-npm start
-```
-The frontend can be accessed at `localhost:3000`. If the frontend successfully connects to the backend, a message saying "SUCCESS" followed by a guid should be displayed on the screen.  If the connection failed, an error message will be displayed on the screen.
+- Creating Terraform configurations for AWS infrastructure.
+- Preparing Docker configurations for the frontend and backend.
+- Creating Kubernetes deployment and service configurations.
+- Organizing application deployment resources using Helm.
+- Working with the application architecture to support communication between the frontend and backend.
 
-# Configuration
-The frontend has a configuration file at `frontend/src/config.js` that defines the URL to call the backend. This URL is used on `frontend/src/App.js#12`, where the front end will make the GET call during the initial load of the page.
+## Application Architecture
 
-The backend has a configuration file at `backend/config.js` that defines the host that the frontend will be calling from. This URL is used in the `Access-Control-Allow-Origin` CORS header, read in `backend/index.js#14`
+The project uses a React frontend that communicates with an Express backend.
 
-# Optional Extras
-The core requirement for this challenge is to get the provided application up and running for consumption over the public internet. That being said, there are some opportunities in this code challenge to demonstrate your skill sets that are above and beyond the core requirement.
+The intended AWS deployment architecture uses Amazon EKS to run the containerized application, with Kubernetes resources managing application workloads and networking.
 
-A few examples of extras for this coding challenge:
-1. Dockerizing the application
-2. Scripts to set up the infrastructure
-3. Providing a pipeline for the application deployment
-4. Running the application in a serverless environment
+## Repository Structure
 
-This is not an exhaustive list of extra features that could be added to this code challenge. At the end of the day, this section is for you to demonstrate any skills you want to show that’s not captured in the core requirement.
+- `frontend/` — React frontend application
+- `backend/` — Express backend application
+- `terraform/` — AWS infrastructure configurations
+- `kubernetes/` — Kubernetes deployment configurations
+- `helm/tech-challenge/` — Helm chart configurations
+
+## Deployment Instructions
+
+The repository contains Terraform, Kubernetes, and Helm configuration files for deploying the application.
+
+A complete, reproducible deployment guide, including prerequisites, environment configuration, deployment commands, and validation steps, will be documented here.
+
+## Skills Demonstrated
+
+This project demonstrates practical experience with cloud infrastructure, infrastructure automation, containerization, and Kubernetes application deployment.
+
+It also demonstrates my ability to work with multiple DevOps technologies and understand how they fit together to support an application.
+
+## Project Background
+
+This project was completed as a technical challenge using an existing React and Express application. My focus was on implementing the infrastructure and deployment components rather than creating the original application code.
